@@ -1,0 +1,5 @@
+{
+  "title": "Backprop by hand",
+  "date": "2026-10-10",
+  "description": "Tiny net, live numbers: step forward, watch gradients flow, then Apply SGD and see the loss move."
+}

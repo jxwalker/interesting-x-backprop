@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interesting X · Backprop by hand</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Polish: the canvas carries the loss now; give it the room. */
+      body #app .loss-chip { display: none; }
+      body #app .foot { display: none; }
+      body #app .steps { grid-template-columns: 1.2fr 1fr 1fr 1fr; }
+      body #app .btn-train {
+        border-color: rgba(245, 215, 110, 0.6);
+        background: linear-gradient(180deg, rgba(245, 215, 110, 0.28), rgba(14, 28, 38, 0.92));
+        color: #fff6c2;
+        font-size: 0.95rem;
+      }
+      body #app .btn-train.active { box-shadow: 0 0 0 2px rgba(245, 215, 110, 0.35); }
+      @media (max-width: 640px) {
+        body #app { gap: 0.4rem; }
+        body #app .hint { font-size: 0.85rem; }
+        body #app .stage { height: 510px; min-height: 510px; flex: none; }
+        body #app .panel-title { display: none; }
+        body #app .steps { grid-template-columns: 1fr 1fr; }
+        body #app .btn { padding: 0.5rem 0.45rem; }
+        body #app .util { flex-direction: row; flex-wrap: wrap; align-items: center; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
